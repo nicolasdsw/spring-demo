@@ -1,0 +1,2 @@
+insert into usuario(id, descricao, email, nome) values (10, 'desc 10', 'email@email.10', 'nome 10');
+insert into usuario(id, descricao, email, nome) values (20, 'desc 20', 'email@email.20', 'nome 20');
