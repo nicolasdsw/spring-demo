@@ -10,12 +10,19 @@ public class UsuarioService {
 
 	private final UsuarioRepository usuarioRepository;
 	
-//	public UsuarioService(UsuarioRepository usuarioRepository) {
-//		super();
-//		this.usuarioRepository = usuarioRepository;
-//	}
-
-	public Iterable<Usuario> findAll() {
+	public Iterable<Usuario> lista() {
 		return usuarioRepository.findAll();
+	}
+	
+	public Usuario busca(Long id) {
+		return usuarioRepository.getOne(id);
+	}
+
+	public Usuario salva(Usuario usuario) {
+		return usuarioRepository.save(usuario);
+	}
+	 
+	public void apaga(Long id) {
+		usuarioRepository.deleteById(id);
 	}
 }
